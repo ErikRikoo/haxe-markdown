@@ -428,6 +428,7 @@ class BlockHtmlSyntax extends BlockSyntax {
 			parser.advance();
 		}
 
+		trace(childLines.join('\n'));
 		return new TextNode(childLines.join('\n'));
 	}
 }
