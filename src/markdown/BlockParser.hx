@@ -338,7 +338,7 @@ class CodeBlockSyntax extends BlockSyntax {
 		// Escape the code.
 		var escaped = childLines.join('\n').htmlEscape();
 
-		return new ElementNode('pre', [ElementNode.text('code', escaped)]);
+		return ElementNode.text('code', escaped);
 	}
 }
 
@@ -381,7 +381,7 @@ class GitHubCodeBlockSyntax extends BlockSyntax {
 				code.attributes.set('class', 'prettyprint ' + syntax);
 		}
 
-		return new ElementNode('pre', [code]);
+		return code;
 	}
 }
 
